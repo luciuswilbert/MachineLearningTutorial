@@ -1,7 +1,9 @@
 import matplotlib.pyplot as plt
-# help(plt.hist)
 
-values = [0, 0.6, 1.4, 1.6, 2.2, 2.5, 2.6, 3.2, 3.5, 3.9, 4.2, 6]
-
-plt.hist(values, bins=12)
+plt.plot([1, 2, 3])     # first plot
 plt.show()
+plt.clf()               # clear the figure
+
+plt.plot([3, 2, 1])     # second plot
+plt.show()
+plt.clf()               # clear again (optional)
