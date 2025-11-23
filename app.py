@@ -1,5 +1,5 @@
 from sklearn.tree import DecisionTreeRegressor
-
+from sklearn.metrics import mean_absolute_error
 import pandas as pd
 
 melbourne_data = pd.read_csv("melb_data.csv")
@@ -23,3 +23,6 @@ print("Making predictions for the following 5 houses:")
 print(x.head())
 print("The predictions are")
 print(melbourne_model.predict(x.head()))
+
+predicted_home_prices = melbourne_model.predict(x.head())
+print("Mean Absolute Error: ", mean_absolute_error(y.head(), predicted_home_prices))
