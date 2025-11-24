@@ -14,9 +14,7 @@ import pandas as pd
 # print(series_1)
 # print(series_2)
 
-pd.set_option('display.max_rows', 5)
-
 sample_data = pd.read_csv('sample.csv')
-# print(sample_data)
+print(sample_data)
 # print(sample_data.shape)
-print(sample_data['Product B'][0])
+print(sample_data.loc[:,'Region':'Revenue'])
