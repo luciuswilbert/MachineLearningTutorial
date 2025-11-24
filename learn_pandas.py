@@ -21,4 +21,9 @@ print(sample_data)
 # print(sample_data.loc[(sample_data.Region != 'East') & (sample_data.UnitsSold >= 100)]) 
 # print(sample_data.loc[(sample_data.Region.isin(['East', 'West'])) & (sample_data.Revenue >= 100)])
 # print(sample_data.loc[sample_data.CostPerUnit.notnull()])
-print(sample_data.loc[:,'ProductCategory':'UnitsSold'])
+# print(sample_data.loc[:,'ProductCategory':'UnitsSold'])
+# print(sample_data.iloc[0])
+
+# print(sample_data.Region.value_counts())
+
+print(sample_data.Region.map(lambda x : x.lower()))
