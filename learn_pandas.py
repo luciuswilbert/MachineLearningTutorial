@@ -7,9 +7,15 @@ data_frame3 = pd.DataFrame({'Bob': ['I liked it.', 'It was awful'], 'Sue': ['Pre
 series_1 = pd.Series([1, 2, 3, 4, 5])
 series_2 = pd.Series([1, 2, 3], index=['2015 Sales', '2020 Sales', '2025 Sales'], name='Product A')
 
-print(data_frame)
-print(data_frame2)
-print(data_frame3)
+# print(data_frame)
+# print(data_frame2)
+# print(data_frame3)
 
-print(series_1)
-print(series_2)
+# print(series_1)
+# print(series_2)
+
+pd.set_option('display.max_rows', 2)
+
+sample_data = pd.read_csv('sample.csv', index_col=0)
+print(sample_data)
+print(sample_data.shape)
