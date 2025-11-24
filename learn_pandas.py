@@ -26,4 +26,13 @@ print(sample_data)
 
 # print(sample_data.Region.value_counts())
 
-print(sample_data.Region.map(lambda x : x.lower()))
+# print(sample_data.Region.map(lambda x : x.lower()))
+def unitsSoldPlus100 (sample_data):
+    sample_data.UnitsSold = sample_data.UnitsSold.map(lambda u : u + 100)
+    return sample_data
+
+def revMinusCost (sample_data):
+    sample_data.Revenue = sample_data.Revenue - sample_data.CostPerUnit
+    return sample_data
+
+print(sample_data.apply(revMinusCost, axis=1))    
