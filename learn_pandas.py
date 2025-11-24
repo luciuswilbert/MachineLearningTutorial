@@ -17,4 +17,5 @@ import pandas as pd
 sample_data = pd.read_csv('sample.csv')
 print(sample_data)
 # print(sample_data.shape)
-print(sample_data.loc[:,'Region':'Revenue'])
+# print(sample_data.loc[:,'Region':'Revenue'])
+print(sample_data.loc[sample_data.Region != 'East'])
