@@ -10,3 +10,7 @@ print(vertical_stack)
 
 horizontal_stack = pd.concat([df1, df2], axis = 1)
 print(horizontal_stack)
+
+df2.index = df2.index - 1
+horizontal_stack_index_up = pd.concat([df1, df2], axis = 1)
+print(horizontal_stack_index_up)
