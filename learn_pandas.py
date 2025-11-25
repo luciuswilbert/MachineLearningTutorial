@@ -17,3 +17,6 @@ sample_data = pd.read_csv('sample.csv')
 # sample_data = sample_data.rename(index={1: 'One'})
 # print(sample_data)
 # sample_data = sample_data.rename(column={'hi': 'HOII'})
+
+sample_data = sample_data.rename_axis('Features', axis = 'columns').rename_axis('Transactions', axis = 'rows')
+print(sample_data)
