@@ -1,22 +1,12 @@
 import pandas as pd
 
-sample_data = pd.read_csv('sample.csv')
-# print(sample_data.Region.value_counts())
-# print(sample_data.groupby('Region').Region.count())
-# print(sample_data.sort_values(by='len', ascending = False))
-# print(sample_data.UnitsSold.dtype)
-# sample_data.UnitsSold = sample_data.UnitsSold.astype('float64')
-# print(sample_data.dtypes)
-# print(sample_data.loc[:, 'UnitsSold'])
-# print(sample_data.isnull())
-# sample_data = sample_data.fillna('Unknown')
-# print(sample_data.isnull())
-# sample_data.Region = sample_data.Region.replace('East', 'Easttt')
-# print(sample_data)
-# sample_data = sample_data.rename(columns={'UnitsSold': 'UnitSold'})
-# sample_data = sample_data.rename(index={1: 'One'})
-# print(sample_data)
-# sample_data = sample_data.rename(column={'hi': 'HOII'})
+df1 = pd.DataFrame({'A': [1], 'B': [2]}, index=[0])
+df2 = pd.DataFrame({'B': [3], 'C': [4]}, index=[1])
 
-sample_data = sample_data.rename_axis('Features', axis = 'columns').rename_axis('Transactions', axis = 'rows')
-print(sample_data)
+print(df1, df2)
+
+vertical_stack = pd.concat([df1, df2])
+print(vertical_stack)
+
+horizontal_stack = pd.concat([df1, df2], axis = 1)
+print(horizontal_stack)
