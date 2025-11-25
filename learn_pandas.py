@@ -5,12 +5,15 @@ df2 = pd.DataFrame({'B': [3], 'C': [4]}, index=[1])
 
 print(df1, df2)
 
-vertical_stack = pd.concat([df1, df2])
-print(vertical_stack)
+# vertical_stack = pd.concat([df1, df2])
+# print(vertical_stack)
 
-horizontal_stack = pd.concat([df1, df2], axis = 1)
-print(horizontal_stack)
+# horizontal_stack = pd.concat([df1, df2], axis = 1)
+# print(horizontal_stack)
 
 df2.index = df2.index - 1
-horizontal_stack_index_up = pd.concat([df1, df2], axis = 1)
-print(horizontal_stack_index_up)
+# horizontal_stack_index_up = pd.concat([df1, df2], axis = 1)
+# print(horizontal_stack_index_up)
+
+joined_df = df1.join(df2, lsuffix='_left', rsuffix='right_')
+print(joined_df)
