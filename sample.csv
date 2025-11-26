@@ -5,4 +5,4 @@ TransactionID,ProductCategory,Region,UnitsSold,Revenue,CostPerUnit
 1004,Electronics,East,8,2400.00,250.00
 1005,Clothing,Central,12,300.50,10.00
 1006,Books,West,7,105.00,5.00
-1007,Books,East,10,50.00
+1007,Books,East,10,50.00, 2.00
