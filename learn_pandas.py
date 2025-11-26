@@ -1,19 +1,8 @@
 import pandas as pd
+import matplotlib.pyplot as plt
+from sklearn.model_selection import train_test_split
+from sklearn.impute import SimpleImputer
 
-df1 = pd.DataFrame({'A': [1], 'B': [2]}, index=[0])
-df2 = pd.DataFrame({'B': [3], 'C': [4]}, index=[1])
-
-print(df1, df2)
-
-# vertical_stack = pd.concat([df1, df2])
-# print(vertical_stack)
-
-# horizontal_stack = pd.concat([df1, df2], axis = 1)
-# print(horizontal_stack)
-
-df2.index = df2.index - 1
-# horizontal_stack_index_up = pd.concat([df1, df2], axis = 1)
-# print(horizontal_stack_index_up)
-
-joined_df = df1.join(df2, lsuffix='_left', rsuffix='right_')
-print(joined_df)
+sample_data = pd.read_csv('sample.csv')
+sample_data = sample_data.dropna(axis=0, subset=['CostPerUnit'], inplace=True)
+print(sample_data)
